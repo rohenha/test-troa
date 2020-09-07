@@ -2,7 +2,7 @@
 
 Cet exercice a pour but d'évaluer rapidement votre capacité de réflexion, vos compétences dans les langages HTML/CSS/JS et PHP, l'utilisation de packages manager (Composer, NPM...) et de de bundlers (Webpack, Gulp, Parcel ou autre).
 
-Il vous sera demandé de cloner/forker ce dépôt Git, et créer votre propre dépôt, nous le mettre à disposition via GitHub, GitLab ou Bitbucket une fois l'exercice terminé.
+Il vous sera demandé de cloner/forker ce dépôt Git, créer votre propre dépôt, nous le mettre à disposition via GitHub, GitLab ou Bitbucket une fois l'exercice terminé.
 
 ## Objectif
 
@@ -25,7 +25,10 @@ Dans chaque modale, vous devrez afficher :
 - ingredients
 - food pairings
 
-Vous trouverez la maquette en suivant ce lien [lien](https://example.com)
+Vous trouverez les maquettes ici :
+
+- [Liste des bières](https://projects.invisionapp.com/share/EAYO5TZTHDS#/screens/430821303)
+- [Modale de la bière](https://projects.invisionapp.com/share/EAYO5TZTHDS#/screens/430821304)
 
 ## Spécifications
 
