@@ -1,5 +1,45 @@
 {
   "name": "2020-test-front",
   "description": "Exercice d'évaluation pour le poste de développeur Front-End",
-  "private": true
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:rohenha/test-troa.git",
+  "author": "rohenha <romain.breton.pro@gmail.com>",
+  "license": "MIT",
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.6",
+    "gatsby": "^2.24.50",
+    "gatsby-image": "^2.4.16",
+    "gatsby-plugin-postcss": "^2.3.11",
+    "gatsby-plugin-react-helmet": "^3.3.10",
+    "gatsby-plugin-sass": "^2.3.12",
+    "gatsby-plugin-tsconfig-paths": "^1.0.2",
+    "gatsby-source-filesystem": "^2.3.27",
+    "node-sass": "^4.14.1",
+    "prettier": "2.1.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^6.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "bootstrap": "^4.5.2",
+    "react-visibility-sensor": "^5.1.1"
+  }
 }

@@ -1,0 +1,16 @@
+version: "2"
+plugins:
+  sass-lint:
+    enabled: true
+    rules:
+      class-name-format:
+        - 1
+        - convention: 'hyphenatedbem'
+  tslint:
+    enabled: true
+    config: tslint.json
+exclude_patterns:
+  - "node_modules/**"
+  - "db/**"
+  - "config/**"
+  - "test/**"

@@ -1,0 +1,76 @@
+.modal
+    background-color: $color-white
+    height: calc(100% - 140px)
+    left: 0
+    position: fixed
+    top: 140px
+    z-index: 5
+
+    .container-fluid,
+    .row,
+    &__image,
+    &__text
+        height: 100%
+
+    &__close
+        background-color: transparent
+        border: none
+        bottom: calc(100% + 60px)
+        height: 30px
+        left: 50%
+        position: absolute
+        transform: translate(-50%, 50%)
+        width: 30px
+
+        &::before,
+        &::after
+            background-color: $color-black
+            content: ""
+            display: block
+            height: 2px
+            left: 50%
+            position: absolute
+            top: 50%
+            width: 80%
+
+        &::before
+            transform: translate(-50%, -50%) rotate(45deg)
+
+        &::after
+            transform: translate(-50%, -50%) rotate(-45deg)
+
+    &__content
+        padding: 50px
+        // &__content
+        &__subtitle,
+        &__text
+            margin-bottom: 60px
+
+    &__image
+        border-right: 1px solid $color-3
+        overflow: hidden
+        text-align: center
+
+        &__content
+            align-items: center
+            display: flex
+            height: 100%
+            justify-content: center
+            position: relative
+            width: 100%
+
+        img
+            max-height: 90%
+            max-width: 50%
+            z-index: 2
+
+        .text_modal_title
+            // display: none
+            left: 50%
+            position: absolute
+            top: 50%
+            transform: translate(-50%, -50%)
+            width: 100%
+            z-index: 1
+
+        
