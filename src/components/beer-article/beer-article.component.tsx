@@ -20,9 +20,10 @@ export class BeerArticleComponent extends React.Component<IBeerArticleProps, IBe
         this.state = {
             visible: false
         }
+        this.onChange = this.onChange.bind(this);
     };
 
-    private onChange = (isVisible: boolean) => {
+    private onChange(isVisible: boolean): void {
         this.setState({
             visible: isVisible
         });
@@ -40,7 +41,7 @@ export class BeerArticleComponent extends React.Component<IBeerArticleProps, IBe
                             <div>
                                 <h2>{this.props.beer.name}</h2>
                                 <h3>{this.props.beer.tagline}</h3>
-                                <button className="button" onClick={this.props.event}>See More</button>
+                                <button className="button" onClick={this.props.event} data-text="See More"><span>See More</span></button>
                             </div>
                         </div>
                     </div>

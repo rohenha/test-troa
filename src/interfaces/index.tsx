@@ -10,5 +10,8 @@ export interface IBeerModal extends IBeer {
     description: string, 
     abv: number, 
     ingredients: any[], 
-    food_pairings: string[], 
+    food_pairings: string[],
+    ebc: number,
+    ibu: number,
+    srm: number
 }

@@ -1,16 +1,18 @@
 .modal
     background-color: $color-white
-    height: calc(100% - 140px)
+    height: calc(100% - 127px)
     left: 0
     position: fixed
-    top: 140px
+    top: 127px
+    width: 100%
     z-index: 5
 
-    .container-fluid,
-    .row,
-    &__image,
-    &__text
+    &--open
+        overflow: hidden
+
+    .container-fluid
         height: 100%
+        overflow-y: scroll
 
     &__close
         background-color: transparent
@@ -41,7 +43,7 @@
 
     &__content
         padding: 50px
-        // &__content
+        text-align: center
         &__subtitle,
         &__text
             margin-bottom: 60px
@@ -72,5 +74,46 @@
             transform: translate(-50%, -50%)
             width: 100%
             z-index: 1
+
+    h3:not(.modal__content__text)
+        margin-bottom: 25px
+
+    table
+        width: 100%
+        &:not(:last-child)
+            margin-bottom: 25px
+
+    tr
+        border-bottom: 1px solid $color-3
+        &:first-child
+            border-top: 1px solid $color-3
+
+    td
+        padding: 20px 0
+        &:first-child
+            text-align: left
+        &:last-child
+            text-align: right
+
+        span
+            display: block
+            margin-bottom: 5px
+            &:last-child
+                margin-bottom: 0
+
+    @include media-breakpoint-up(md)
+        &__content
+            text-align: left
+            &__container
+                height: 100%
+                overflow-y: scroll
+
+        .row,
+        &__image,
+        &__text
+            height: 100%
+
+        .container-fluid
+            overflow-y: auto
 
         

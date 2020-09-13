@@ -20,9 +20,10 @@ export class BeersComponent extends React.Component<IBeersProps, IBeersState> {
             list: [],
             beer: null
         }
+        this.toggleModal = this.toggleModal.bind(this);
     };
 
-    public componentDidMount = () => {
+    public componentDidMount(): void {
         getApiContent('').then((res: any) => {
             setTimeout(() => {
                 this.setState({
@@ -32,28 +33,28 @@ export class BeersComponent extends React.Component<IBeersProps, IBeersState> {
         });
     };
 
-    public openModal = (beer: IBeer): void => {
+    public toggleModal(beer: IBeer | null): void{
         this.setState({
             beer: beer
         });
     };
 
-    public closeModal = (): void => {};
+    public closeModal(): void {
+
+    };
 
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>
                 <HeaderComponent />
                 {this.state.beer !== null ?
-                    <ModalComponent id={this.state.beer.id} closeEvent={this.closeModal.bind(this)} /> : null}
+                    <ModalComponent id={this.state.beer.id} closeEvent={this.toggleModal.bind(this, null)} /> : null}
                 <main className="beers_container">
                     <h1>beers</h1>
                     <div className="container">
                         <ul className="row">
-                            {this.state.list.map((beer: IBeer) => (
-                                <BeerArticleComponent key={beer.id} beer={beer} event={() => {
-                                    this.openModal(beer);
-                                }} />
+                            {this.state.list.map((beer: IBeer): React.ReactElement<any> => (
+                                <BeerArticleComponent key={beer.id} beer={beer} event={this.toggleModal.bind(this, beer)} />
                             ))}
                         </ul>
                     </div>

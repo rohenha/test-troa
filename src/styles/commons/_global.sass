@@ -11,4 +11,32 @@ img
     background-color: $color-black
     border: none
     display: inline-block
+    overflow: hidden
     padding: 16px 53px
+    position: relative
+
+    &::before
+        content: attr(data-text)
+        display: block
+        left: 50%
+        opacity: 0
+        position: absolute
+        top: 50%
+        transform: translate(-50%, -50%) scale(0)
+        transition: transform .3s ease-in-out .1s, opacity .3s ease-in-out .1s
+        z-index: 1
+
+
+    span
+        display: inline-block
+        position: relative
+        transition: transform .4s ease-in-out, opacity .3s ease-in-out
+        z-index: 2
+
+    &:hover
+        &::before
+            opacity: 1
+            transform: translate(-50%, -50%) scale(1)
+        span
+            opacity: 0
+            transform: scale(5)
