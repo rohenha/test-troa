@@ -39,10 +39,6 @@ export class BeersComponent extends React.Component<IBeersProps, IBeersState> {
         });
     };
 
-    public closeModal(): void {
-
-    };
-
     public render(): React.ReactElement<any> {
         return (
             <React.Fragment>

@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-export async function getApiContent(id: string) {
+export async function getApiContent(id: string): Promise<[]> {
     try {
         const response = await axios.get('http://localhost:8888/test-troa/public/endpoint.php', {
             params: {
@@ -11,6 +11,6 @@ export async function getApiContent(id: string) {
             resolve(JSON.parse(response.data));
         })
     } catch (error) {
-        return {};
+        return [];
     }
 };
